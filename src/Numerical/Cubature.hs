@@ -1,5 +1,6 @@
 {-# LANGUAGE ForeignFunctionInterface #-}
 module Numerical.Cubature
+  (cubature)
   where
 import           Foreign.C.Types       (CUInt(..))
 import           Foreign.Marshal.Alloc (free, mallocBytes)
@@ -54,8 +55,8 @@ cubature version f n xmin xmax relError = do
   freeHaskellFunPtr fPtr
   return Result { _integral = result, _error = errorEstimate }
 
-fExample :: [Double] -> Double
-fExample list = exp (-0.5 * (sum $ zipWith (*) list list))
+-- fExample :: [Double] -> Double
+-- fExample list = exp (-0.5 * (sum $ zipWith (*) list list))
 
-example :: IO Result
-example = cubature 'h' fExample 2 [-6,-6] [6,6] 1e-10
+-- example :: IO Result
+-- example = cubature 'h' fExample 2 [-6,-6] [6,6] 1e-10
