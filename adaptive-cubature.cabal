@@ -2,7 +2,7 @@ cabal-version:       2.2
 name:                adaptive-cubature
 version:             0.1.0.0
 synopsis:            Multidimensional integration
-description:         Adaptive integration of a multivariate function on a hypercube.
+description:         Adaptive integration of a multivariate function on a hyperrectangle.
 homepage:            https://github.com/stla/adaptive-cubature#readme
 license:             GPL-3.0-only
 license-file:        LICENSE
