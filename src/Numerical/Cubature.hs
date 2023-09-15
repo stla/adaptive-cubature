@@ -33,6 +33,7 @@ fun2integrand f n _ x _ _ fval = do
   poke fval (f list)
   return 0
 
+-- | Multivariate integration on an axis-aligned box.
 cubature :: Char                 -- ^ cubature version, 'h' or 'p'
          -> ([Double] -> Double) -- ^ integrand
          -> Int                  -- ^ dimension (number of variables)
