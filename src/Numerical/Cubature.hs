@@ -1,6 +1,6 @@
 {-# LANGUAGE ForeignFunctionInterface #-}
 module Numerical.Cubature
-  (cubature)
+  (cubature, Result(..))
   where
 import           Foreign.C.Types       (CUInt(..))
 import           Foreign.Marshal.Alloc (free, mallocBytes)
